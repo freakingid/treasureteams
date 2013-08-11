@@ -10,3 +10,8 @@ var mapData = [
 Template.mapUser.helpers({
   userMap: postsData
 });
+
+// maps code is supposed to go here, how?
+Template.mapUser.rendered = function() {
+
+};
