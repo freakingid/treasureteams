@@ -5,7 +5,7 @@
   <div class="container">
     <header class="navbar">
       <div class="navbar-inner">
-        <a class="brand" href="/">Treasure Teams</a>
+        <a class="brand" href="{{MapUserPath}}">Treasure Teams</a>
       </div>
     </header>
     <div id="main" class="row-fluid">
@@ -14,6 +14,11 @@
       should be a custom block helper, not a handlebars #if#else 
       BUT we'll do that later, for now we just want a map
       -->
+    
+    <!--
+      Actually forget that... this is what routing is for.
+      renderPage looks at routes we set up.
+    -->
     
     <!--
       a. Finds List
@@ -30,7 +35,7 @@
         d4. Map my location
         d5. Map last recorded location of all team members
       -->
-      {{> mapView}}
+      {{renderPage}}
     </div>
   </div>
 </body>
