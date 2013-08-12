@@ -18,7 +18,24 @@ window.resize = function(t) {
   */
 };
 
-// maps code is supposed to go here, how?
+/*
+  * Ask user for permission to get location info
+  * Then tell the map to center on their resolved location
+// From http://stackoverflow.com/questions/10563789/how-to-locate-user-with-leaflet-locate
+*/
+function locateUser() {
+  this.map.locate({setView : true});
+}
+
+// Events for this template
+Template.mapUser.events({
+  // event for clicking the Find Me link
+  'click #findMe': function(e) {
+    e.preventDefault();
+    locateUser();
+  }
+});
+
 // .rendered means to put script in AFTER it is ready for the browser
 Template.mapUser.rendered = function() {
   var query,
