@@ -1,9 +1,10 @@
 <template name="mapUser">
-  <div class="post">
-    <div class="post-content">
-      <!-- put the map here -->
-      {{userMap}}
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+  {{#constant}}
+    <div id="container" class="mapcontainer">
+      <h1 class="title">Treasure Teams Leaflet Demo</h1>
+      <div id="map" class="map"></div>
+      <div class="notice first">Double-click on map creates a marker</div>
+      <div class="notice second">Click on a marker to delete it</div>
     </div>
-  </div>
+  {{/constant}}
 </template>

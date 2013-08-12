@@ -1,5 +1,6 @@
 <head>
   <title>Treasure Teams</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
   <div class="container">
@@ -8,34 +9,9 @@
         <a class="brand" href="{{MapUserPath}}">Treasure Teams</a>
       </div>
     </header>
-    <div id="main" class="row-fluid">
-    <!--
-      conditional for what we should be showing here
-      should be a custom block helper, not a handlebars #if#else 
-      BUT we'll do that later, for now we just want a map
-      -->
-    
-    <!--
-      Actually forget that... this is what routing is for.
-      renderPage looks at routes we set up.
-    -->
-    
-    <!--
-      a. Finds List
-        a1. Mine (All found by me)
-        a2. Team (All found by teammates)
-        a3. Hunt (all, found and not)
-      b. Team Messages
-        b1. Message list
-      c. Find Details
-      d. Map View
-        d1. Map my finds
-        d2. Map team finds
-        d3. Map all finds in the hunt so far
-        d4. Map my location
-        d5. Map last recorded location of all team members
-      -->
+    <!-- <div id="main" class="row-fluid"> -->
+
       {{renderPage}}
-    </div>
+    <!-- </div> -->
   </div>
 </body>
