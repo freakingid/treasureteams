@@ -1,13 +1,21 @@
 // From meteor-leaflet-demo
 window.resize = function(t) {
   var c, h, m, top, w;
+  /*
+  // this won't work because outercontainer is not part of 'this' (current template portion in map_user.html)
+  w = t.find('#outercontainer').width;
+  h = t.find('#outercontainer').height;
+  */
   w = window.innerWidth;
   h = window.innerHeight;
   top = t.find('#map').offsetTop;
   c = w - 40;
   m = (h - top) - 65;
+  /*
+  // stop resizing these things
   t.find('#container').style.width = "" + c + "px";
   return t.find('#map').style.height = "" + m + "px";
+  */
 };
 
 // maps code is supposed to go here, how?
