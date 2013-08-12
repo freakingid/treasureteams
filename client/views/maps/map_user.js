@@ -18,13 +18,30 @@ window.resize = function(t) {
   */
 };
 
+// =======================================================
+// Global for the "location found" of the user?
+// Probably should be in Session variable also / or instead
+
+
 /*
   * Ask user for permission to get location info
   * Then tell the map to center on their resolved location
 // From http://stackoverflow.com/questions/10563789/how-to-locate-user-with-leaflet-locate
 */
 function locateUser() {
-  this.map.locate({setView : true});
+  var userLocation = this.map.locate({setView : true});
+}
+
+/*
+  * Ask user for permission to get location info
+  * Then move the map to that location
+  * Then add a marker to that location
+*/
+function markUser() {
+  // make sure we update where the user really is
+  locateUser();
+  // now drop a marker there
+  
 }
 
 // Events for this template
@@ -33,6 +50,9 @@ Template.mapUser.events({
   'click #findMe': function(e) {
     e.preventDefault();
     locateUser();
+  },
+  'LocationEvent', function(e) {
+    alert('locationevent fired');
   }
 });
 
