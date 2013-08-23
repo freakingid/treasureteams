@@ -1,6 +1,7 @@
 {
   "packages": {
     "router": {},
-    "leaflet": {}
+    "leaflet": {},
+    "accounts-ui-bootstrap-dropdown": {}
   }
 }

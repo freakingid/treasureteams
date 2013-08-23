@@ -10,3 +10,5 @@ standard-app-packages
 leaflet
 page-js-ie-support
 router
+accounts-ui-bootstrap-dropdown
+accounts-password

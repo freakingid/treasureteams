@@ -50,9 +50,6 @@ Template.mapUser.events({
   'click #findMe': function(e) {
     e.preventDefault();
     locateUser();
-  },
-  'LocationEvent', function(e) {
-    alert('locationevent fired');
   }
 });
 
