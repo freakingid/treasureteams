@@ -2,6 +2,7 @@
   "packages": {
     "router": {},
     "leaflet": {},
-    "accounts-ui-bootstrap-dropdown": {}
+    "accounts-ui-bootstrap-dropdown": {},
+    "bootstrap-datepicker2": {}
   }
 }
