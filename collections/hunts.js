@@ -23,3 +23,4 @@
   For historical reasons, we might do this:
   datecompleted   datetime        Hunt Completion Date  When the hunt came to a close, for whatever reason.
 */
+Hunts = new Meteor.Collection('hunts');

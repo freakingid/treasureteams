@@ -1,0 +1,81 @@
+<template name="huntSubmit">
+  <form class="main">
+    <div class="control-group">
+        <label class="control-label" for="url">Name</label>
+        <div class="controls">
+            <input name="name" type="text" value="" placeholder="Hunt Name"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="message">Details</label>
+        <div class="controls">
+            <textarea name="details" type="text" value=""/>
+        </div>
+    </div> 
+
+    <div class="control-group">
+        <label class="control-label" for="title">Points</label>
+        <div class="controls">
+            <input name="points" type="text" value="" placeholder="How many points is this hunt worth?"/>
+        </div>
+    </div>
+    
+    <!--
+      I need a datepicker for start and stop dates.
+      I installed bootstrap datepicker, but I am not sure how to use it.
+      Template.mytemplate.rendered = function() {
+  $('.datepicker').datepicker();
+}
+    -->
+
+    <div class="control-group">
+        <label class="control-label" for="title">Start Date</label>
+        <div class="controls">
+            <input class="datepicker" name="datestart" type="text" value="" />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="title">End Date</label>
+        <div class="controls">
+            <input class="datepicker" name="dateend" type="text" value="" />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="title">Status</label>
+        <div class="controls">
+            <input name="status" type="text" value="" placeholder="Is this hunt active, or what?"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="title">Minimum Age</label>
+        <div class="controls">
+            <input name="age_min" type="text" value="" placeholder="What's the youngest a person can be to join this hunt?"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="title">Maximum Age</label>
+        <div class="controls">
+            <input name="age_max" type="text" value="" placeholder="What's the oldest a person can be to join this hunt?"/>
+        </div>
+    </div>
+
+
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
+    </div>
+  </form>
+</template>
+
+<!--
+  status              string          Hunt Status           Draft; Scheduled; Ongoing; Judging; Completed; any other status
+  dateadded           datetime        Submission Date       When was this find added to the hunt?
+  age_min             int             Minimum Age           Minimum age of users allowed to join
+  age_max             int             Maximum Age           Maximum age of users allowed to join
+-->
