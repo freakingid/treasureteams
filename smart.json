@@ -3,6 +3,7 @@
     "router": {},
     "leaflet": {},
     "accounts-ui-bootstrap-dropdown": {},
-    "bootstrap-datepicker2": {}
+    "bootstrap-datepicker2": {},
+    "spin": {}
   }
 }
