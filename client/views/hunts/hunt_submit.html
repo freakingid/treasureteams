@@ -1,21 +1,21 @@
 <template name="huntSubmit">
   <form class="main">
     <div class="control-group">
-        <label class="control-label" for="url">Name</label>
+        <label class="control-label" for="name">Hunt Name</label>
         <div class="controls">
             <input name="name" type="text" value="" placeholder="Hunt Name"/>
         </div>
     </div>
 
     <div class="control-group">
-        <label class="control-label" for="message">Details</label>
+        <label class="control-label" for="details">Details</label>
         <div class="controls">
             <textarea name="details" type="text" value=""/>
         </div>
     </div> 
 
     <div class="control-group">
-        <label class="control-label" for="title">Points</label>
+        <label class="control-label" for="points">Points</label>
         <div class="controls">
             <input name="points" type="text" value="" placeholder="How many points is this hunt worth?"/>
         </div>
@@ -72,10 +72,3 @@
     </div>
   </form>
 </template>
-
-<!--
-  status              string          Hunt Status           Draft; Scheduled; Ongoing; Judging; Completed; any other status
-  dateadded           datetime        Submission Date       When was this find added to the hunt?
-  age_min             int             Minimum Age           Minimum age of users allowed to join
-  age_max             int             Maximum Age           Maximum age of users allowed to join
--->

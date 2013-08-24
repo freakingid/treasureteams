@@ -1,0 +1,73 @@
+<template name="huntEdit">
+  {{#with hunt}}
+    <form class="main">
+        <div class="control-group">
+          <label class="control-label" for="name">Hunt Name</label>
+          <div class="controls">
+              <input name="name" type="text" value="{{name}}" placeholder="Hunt Name"/>
+          </div>
+      </div>
+
+        <div class="control-group">
+            <label class="control-label" for="details">Details</label>
+            <div class="controls">
+                <textarea name="details" type="text" value="{{details}}"/>
+            </div>
+        </div> 
+
+        <div class="control-group">
+            <label class="control-label" for="points">Points</label>
+            <div class="controls">
+                <input name="points" type="text" value="{{points}}" placeholder="How many points is this hunt worth?"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="datestart">Start Date</label>
+            <div class="controls">
+                <input class="datepicker" name="datestart" type="text" value="{{datestart}}" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="dateend">End Date</label>
+            <div class="controls">
+                <input class="datepicker" name="dateend" type="text" value="{{dateend}}" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="status">Status</label>
+            <div class="controls">
+                <input name="status" type="text" value="{{status}}" placeholder="Is this hunt active, or what?"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="age_min">Minimum Age</label>
+            <div class="controls">
+                <input name="age_min" type="text" value="{{age_min}}" placeholder="What's the youngest a person can be to join this hunt?"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="age_max">Maximum Age</label>
+            <div class="controls">
+                <input name="age_max" type="text" value="{{age_max}}" placeholder="What's the oldest a person can be to join this hunt?"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+              <input type="submit" value="Submit" class="btn btn-primary submit"/>
+          </div>
+        </div>
+        <hr/>
+        <div class="control-group">
+          <div class="controls">
+              <a class="btn btn-danger delete" href="#">Delete hunt</a>
+          </div>
+        </div>
+    </form>
+  {{/with}}
+</template>

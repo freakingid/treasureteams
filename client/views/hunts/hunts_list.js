@@ -1,6 +1,6 @@
 /* return ALL hunts in the database */
 Template.huntsList.helpers({
   hunts: function() {
-    return Hunts.find();
+    return Hunts.find({}, {sort: {dateAdded: -1}});
   }
 });
