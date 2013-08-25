@@ -39,3 +39,11 @@ Template.huntEdit.events({
     }
   }
 });
+
+Template.huntEdit.rendered = function() {
+  $('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    todayBtn: 'linked',
+    autoclose: true
+  });
+}

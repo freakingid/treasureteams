@@ -22,3 +22,11 @@ Template.huntSubmit.events({
     });
   }
 });
+
+Template.huntSubmit.rendered = function() {
+  $('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    todayBtn: 'linked',
+    autoclose: true
+  });
+}
