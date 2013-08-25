@@ -1,7 +1,7 @@
 <template name="huntItem">
   <div class="post">
     <div class="post-content">
-      <h3><a href="{{url}}">{{name}}</a></h3>
+      <h3><a href="{{huntPagePath this}}">{{name}}</a></h3>
       <p>{{details}}</p>
       <p>
         <strong>Point value: </strong>{{points}}<br />
@@ -11,7 +11,7 @@
         <strong>Minimum age: </strong>{{age_min}}<br />
         <strong>Maximum age: </strong>{{age_max}}
       </p>
-        {{#if ownPost}}<p><a href="{{huntEditPath this}}">Edit Hunt</a></p>{{/if}}
+        {{#if ownHunt}}<p><a href="{{huntEditPath this}}">Edit Hunt</a></p>{{/if}}
       
     </div>
   </div>

@@ -1,6 +1,15 @@
+/*
+  Was trying to use routes like:
+  a. /hunt/submit
+  b. /hunt/:_id/edit
+  From Discover Meteor I thought these would work.
+  Changing to:
+  a. /huntsubmit
+  b. /huntedit/:_id
+*/
 Meteor.Router.add({
-    '/': {to: 'huntsList', as: 'home'},
-    '/hunts' : 'huntsList',
+    '/': 'huntsList',
+    
     '/hunt/:_id': {
         to: 'huntPage',
         and: function(id) { Session.set('currentHuntId', id); }
@@ -9,7 +18,7 @@ Meteor.Router.add({
         to: 'huntEdit',
         and: function(id) { Session.set('currentHuntId', id); }
     },
-    '/hunt/submit' : 'huntSubmit',
+    '/huntsubmit' : 'huntSubmit',
     '/maps/user': 'mapUser'
 });
 // require to be logged in as any user to access passed-in page

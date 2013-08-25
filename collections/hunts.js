@@ -47,15 +47,6 @@ Meteor.methods({
         'This name has already been used for a hunt', 
         huntWithSameName._id);
     }
-
-      name: $(event.target).find('[name=name]').val(),
-      details: $(event.target).find('[name=details]').val(),
-      points: $(event.target).find('[name=points]').val(),
-      datestart: $(event.target).find('[name=datestart]').val(),
-      dateend: $(event.target).find('[name=dateend]').val(),
-      status: $(event.target).find('[name=status]').val(),
-      age_min: $(event.target).find('[name=age_min]').val(),
-      age_max: $(event.target).find('[name=age_max]').val()
       
     // pick out the whitelisted keys we allow to be added to database
     var hunt = _.extend(_.pick(huntAttributes, 'name', 'details', 'points',
@@ -72,6 +63,8 @@ Meteor.methods({
 });
 
 // Permissions required (on right) for actions (on left) to be allowed
+// for debug, we let anyone update document, since ownership isn't ironed out
+// so, we made a change to "ownsDocument"
 Hunts.allow({
   update: ownsDocument,
   remove: ownsDocument

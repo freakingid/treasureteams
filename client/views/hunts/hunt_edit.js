@@ -1,6 +1,6 @@
 // Get the hunt for use in the template
 Template.huntEdit.helpers({
-  post: function() {
+  hunt: function() {
     return Hunts.findOne(Session.get('currentHuntId'));
   }
 });
@@ -34,7 +34,7 @@ Template.huntEdit.events({
     e.preventDefault();
     if (confirm("Delete this hunt?")) {
       var currentHuntId = Session.get('currentHuntId');
-      Posts.remove(currentHuntId);
+      Hunts.remove(currentHuntId);
       Meteor.Router.to('huntsList');
     }
   }
